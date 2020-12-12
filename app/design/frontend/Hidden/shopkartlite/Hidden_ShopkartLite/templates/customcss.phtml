@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+// @codingStandardsIgnoreFile
+?>
+<?php
+$helper = $this->helper('Hidden\ShopkartLite\Helper\Data');
+$customCss = $helper->getConfigValue('shopkartlitesettings/customcss/custom_css');
+if ($customCss != '') {
+?>
+    <style>
+        <?php
+        echo $customCss;
+        ?>
+        body {
+            overflow: hidden;
+        }
+    </style>
+<?php }
+?>
+
+<div class="loader-wrapper">
+    <div class="loader">
+        <span id='a'></span>
+        <span id='b'></span>
+        <span id='c'></span>
+        <span id='d'></span>
+        <span id='e'></span>
+        <span id='f'></span>
+        <span id='g'></span>
+        <span id='h'></span>
+        <span id='i'></span>
+    </div>
+</div>

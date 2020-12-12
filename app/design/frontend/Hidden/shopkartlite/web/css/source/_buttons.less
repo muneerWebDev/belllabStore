@@ -1,0 +1,59 @@
+// /**
+//  * Copyright © Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common =true) {
+
+    //  Using buttons mixins
+    button,
+    a.action.primary {
+        .lib-css(border-radius, @button__border-radius);
+    }
+
+    button {
+        &:not(.primary) {
+            .lib-css(box-shadow, @button__shadow);
+
+            &:active {
+                .lib-css(box-shadow, @button__shadow-active);
+            }
+        }
+    }
+
+    body {
+        &:not(._keyfocus) {
+            button {
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    a.action.primary {
+        .lib-link-as-button();
+    }
+
+    .action.primary,
+    .wishlist-index-index .column.main .actions-toolbar .primary .action {
+        .lib-button-primary();
+        background-color: @black;
+        font-weight: 400;
+
+        &:hover {
+            background: #fff;
+            color: @black;
+        }
+    }
+
+    .block-minicart .block-content>.actions>.primary .action.primary {
+        font-size: 1.5rem !important;
+        text-transform: capitalize;
+        font-weight: 400;
+    }
+}
